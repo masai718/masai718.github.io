@@ -1,24 +1,104 @@
+
 <!doctype html>
 <html lang="en">
+
 <head>
-
-  <title>Pick a Card</title>
-  <meta name="description" content="Description Goes Here">
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500&display=swap');
 
-  <style type="text/css">
-    <!-- CSS Goes Here -->
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial;
+        font-size: 16px;
+    }
+
+    .video-background {
+        background: #000;
+        position: fixed;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: -99;
+    }
+    .video-foreground,
+    .video-background video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+    #vidtop-content {
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    .vid-info {
+        display: grid;
+        place-items: center;
+        width: 33vw;
+        height: 33vw;
+        border-radius: 50%;
+        background: rgba(255,255,0,0.7);
+        color: #000;
+        padding: 1rem;
+        font-family: Avenir, Helvetica, sans-serif;
+        font-size: 1.5vw;
+        text-align: center;
+        overflow: hidden;
+    }
+    .vid-info div {
+        padding: 2rem;
+    }
+    .vid-info h1 {
+        font-family: 'Montagu Slab', serif;
+        font-size: 2.25vw;
+        font-weight: 700;
+        margin-top: 0;
+        line-height: 1.2;
+    }
+    @media (min-aspect-ratio: 4/3) {
+      .video-foreground { height: 300%; top: -100%; }
+    }
+    @media (max-aspect-ratio: 4/3) {
+      .video-foreground { width: 300%; left: -100%; }
+    }
+    @media all and (max-width: 600px) {
+    .vid-info { width: 50%; padding: .5rem; }
+    .vid-info h1 { margin-bottom: .2rem; }
+    }
+    @media all and (max-width: 500px) {
+    .vid-info .acronym { display: none; }
+    }
   </style>
-
 </head>
-
 <body>
-<nav>
-<img src="/Images/home.png" alt="" width="" height="">
-</nav>
 
-<div>
-  <p>text here</p>
+<div class="video-background">
+    <div class="video-foreground">
+        <video autoplay muted>
+            <!-- change the URL below to match your video's URL. You'll need to have your video hosted 
+             on a server somewhere, and you need the URL to the actual video, not the video's webpage.
+             More on HTML5 video embeds here: https://www.w3schools.com/html/html5_video.asp -->      
+            <source src="/media/StarsBGVideo.mp4" type="video/mp4">
+        </video>
+    </div>
+  </div>
+
+<div id="vidtop-content">
+<div class="vid-info">
+      <div>
+        <h1>HTML5 Video Fullscreen Background Demo</h1>
+        <p>This bypasses issues with iframes that use Javascript</p>
+     </div>
+  </div>
 </div>
 
 </body>
