@@ -15,16 +15,16 @@
      "/fortune-6.html",
     ];
 
-    document.getElementsByTagName("button1").addEventListener("click", function() {
+    document.getElementById("button1").addEventListener("click", function() {
       const randomIndex = Math.floor(Math.random() * websites.length);
       window.location.href = websites[randomIndex];
     });
 
-    document.getElementsByTagName("button2").addEventListener("click", function() {
+    document.getElementById("button2").addEventListener("click", function() {
       const randomIndex = Math.floor(Math.random() * websites.length);
       window.location.href = websites[randomIndex];
       
-    document.getElementsByTagName("button3").addEventListener("click", function() {
+    document.getElementById("button3").addEventListener("click", function() {
       const randomIndex = Math.floor(Math.random() * websites.length);
       window.location.href = websites[randomIndex];
     });
@@ -74,15 +74,15 @@
 
 <div class="Cards">
   <h1>⋆˙⟡ Pick a Card ⟡˙⋆</h1>
-  <button type="button1">  
+  <button id="button1">  
     <img src="/images/tarot-back.png" alt="" style="height:400px;width:auto;">
   </button>
 
-  <button type="button2">
+  <button id="button2">
     <img src="/images/tarot-back.png" alt="" style="height:400px;width:auto;">
   </button>
 
-  <button type="button3">
+  <button id="button3">
     <img src="/images/tarot-back.png" alt="" style="height:400px;width:auto;">
   </button>
 </div>
