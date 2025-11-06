@@ -3,32 +3,7 @@
 
 <head>
   <title>Pick a Card</title>
-  <meta charset="utf-8">
-
-  <script>
-  const websites = [
-     "/fortune-1.html",
-     "/fortune-2.html",
-     "/fortune-3.html",
-     "/fortune-4.html",
-     "/fortune-5.html",
-     "/fortune-6.html",
-    ];
-
-    document.getElementById("button1").addEventListener("click", function() {
-      const randomIndex = Math.floor(Math.random() * websites.length);
-      window.location.href = websites[randomIndex];
-    });
-
-    document.getElementById("button2").addEventListener("click", function() {
-      const randomIndex = Math.floor(Math.random() * websites.length);
-      window.location.href = websites[randomIndex];
-      
-    document.getElementById("button3").addEventListener("click", function() {
-      const randomIndex = Math.floor(Math.random() * websites.length);
-      window.location.href = websites[randomIndex];
-    });
-  </script>
+  <meta charset="utf-8”>
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght@100..900&family=IM+Fell+DW+Pica:ital@0;1&display=swap');
@@ -65,6 +40,11 @@
         appearance: none;
         background-color: inherit;
     }
+
+    button img {
+      height:400px;
+      width:auto;
+    }
   </style>
 </head>
 
@@ -73,17 +53,42 @@
 <div class="Cards">
   <h1>⋆˙⟡ Pick a Card ⟡˙⋆</h1>
   <button id="button1">  
-    <img src="/images/tarot-back.png" alt="" style="height:400px;width:auto;">
+    <img src="/images/tarot-back.png" alt="Card 1">
   </button>
 
   <button id="button2">
-    <img src="/images/tarot-back.png" alt="" style="height:400px;width:auto;">
+    <img src="/images/tarot-back.png" alt="Card 2">
   </button>
 
   <button id="button3">
-    <img src="/images/tarot-back.png" alt="" style="height:400px;width:auto;">
+    <img src="/images/tarot-back.png" alt="Card 3">
   </button>
 </div>
+
+ <script>
+// Scripts generally go at the end of the HTML so the rest of the site loads more quickly.
+
+  const websites = [
+      "/fortune-1.html",
+      "/fortune-2.html",
+      "/fortune-3.html",
+      "/fortune-4.html",
+      "/fortune-5.html",
+      "/fortune-6.html",
+    ];
+
+    // This will select a random site from the array above
+    function goRandomSite() {
+      const randomIndex = Math.floor(Math.random() * websites.length);
+      window.location.href = websites[randomIndex];
+    }
+
+    // This “listens” to the buttons and goes to the random site when clicked.
+    document.getElementById("button1").addEventListener("click", goRandomSite);
+    document.getElementById("button2").addEventListener("click", goRandomSite);
+    document.getElementById("button3").addEventListener("click", goRandomSite);
+  </script>
+
 
 </body>
 </html>
