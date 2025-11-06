@@ -15,16 +15,16 @@
      "/fortune-6.html",
     ];
 
-    document.getElementByType("button1").addEventListener("click", function() {
+    document.getElementsByTagName("button1").addEventListener("click", function() {
       const randomIndex = Math.floor(Math.random() * websites.length);
       window.location.href = websites[randomIndex];
     });
 
-    document.getElementByClass("button2").addEventListener("click", function() {
+    document.getElementsByTagName("button2").addEventListener("click", function() {
       const randomIndex = Math.floor(Math.random() * websites.length);
       window.location.href = websites[randomIndex];
       
-    document.getElementByClass("button3").addEventListener("click", function() {
+    document.getElementsByTagName("button3").addEventListener("click", function() {
       const randomIndex = Math.floor(Math.random() * websites.length);
       window.location.href = websites[randomIndex];
     });
