@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  
+<head>
+  <title>Fortune 4</title>
+  <meta charset="utf-8">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght@100..900&family=IM+Fell+DW+Pica:ital@0;1&display=swap');
+
+    * {
+      cursor: url("/images/cursor.png"), auto;
+      background: rgb(240, 184, 41);
+    }
+    
+    body {
+        margin: 0;
+        font-family: "IM Fell DW Pica", Garamond, serif;
+        font-size: 16px;
+        cursor: url("/images/cursor.png"), auto;
+    }
+
+    .button {
+    text-decoration: none;
+    background: rgb(95, 43, 115);
+    color: white;
+    padding: 1rem;
+    border-radius: 25px;
+    transition:background-color .3s;
+    }
+
+    .button:hover {
+    background: white;
+    color: rgb(95, 43, 115);
+    }
+
+    .Cards h1 {
+      text-align: center;
+    }
+
+    .Cards p {
+      text-align: center;
+      padding: 1em 0;
+      line-height: 1.5;
+    }
+
+    .Cards img {
+      display: block;
+      margin: auto;
+      width: 50%;
+    }
+
+    .Cards a {
+      display: block;
+      margin: auto;
+      width: 30%;
+      text-align: center;
+    }
+
+     .Cards {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        background-color: antiquewhite;
+        padding: 1em;
+        border-radius: 20px;
+        width: 400px;
+    }
+
+    .Cards h1, img, p {
+        background-color: antiquewhite;
+    }
+  </style>
+</head>
+
+<body>
+<nav>
+</nav>
+
+<div class="Cards">
+  <h1>Your Fortune</h1>
+  <img src="/images/tarot-png/The-Chariot.png" alt="" style="height:400px;width:auto;">
+  <p>Your fifth-favorite sock will disappear. This is the beginning of a great adventure.</p>
+  <a href="/pick-a-card.html" class="button">Get a new fortune</a>
+</div>
+
+</body>
+</html>
