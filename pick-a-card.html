@@ -6,16 +6,28 @@
   <meta charset="utf-8">
 
   <script>
-    var links = [
+  const websites = [
      "/fortune-1.html",
      "/fortune-2.html",
      "/fortune-3.html",
      "/fortune-4.html",
      "/fortune-5.html",
      "/fortune-6.html",
-  ];
+    ];
 
-  
+    document.getElementByType("button1").addEventListener("click", function() {
+      const randomIndex = Math.floor(Math.random() * websites.length);
+      window.location.href = websites[randomIndex];
+    });
+
+    document.getElementByClass("button2").addEventListener("click", function() {
+      const randomIndex = Math.floor(Math.random() * websites.length);
+      window.location.href = websites[randomIndex];
+      
+    document.getElementByClass("button3").addEventListener("click", function() {
+      const randomIndex = Math.floor(Math.random() * websites.length);
+      window.location.href = websites[randomIndex];
+    });
   </script>
 
   <style>
