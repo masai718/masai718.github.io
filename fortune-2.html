@@ -11,7 +11,6 @@
 
     * {
       cursor: url("/images/cursor.png"), auto;
-      background: rgb(240, 184, 41);
     }
     
     body {
@@ -34,6 +33,7 @@
     .button:hover {
     background: white;
     color: rgb(95, 43, 115);
+    box-shadow: 1px 1px 20px 4px rgb(196, 126, 242);
     }
 
     .Cards h1 {
@@ -70,14 +70,31 @@
         border-radius: 20px;
         width: 400px;
     }
+    
+         .imagebg {
+        background: #000;
+        position: fixed;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: -99;
+    }
 
-    .Cards h1, img, p {
-        background-color: antiquewhite;
+    .imagebg img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        object-fit: cover;
     }
   </style>
 </head>
 
 <body>
+
+<div class="imagebg">
+  <img src="https://masai718.github.io/images/velvet.jpg" alt="">
+</div>
 
 <div class="Cards">
   <h1>Your Fortune</h1>
