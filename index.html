@@ -3,115 +3,14 @@
 <!-- May Asai -->
   
 <head>
-  <title>Fortune Telling</title>
+  <title>Where will you go?</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght@100..900&family=IM+Fell+DW+Pica:ital@0;1&display=swap');
-    
-    * {
-        box-sizing: border-box;
-        cursor: url("/images/cursor.png"), auto;
-    }
-
-    body {
-        margin: 0;
-        font-family: "IM Fell DW Pica", Garamond, serif;
-        font-size: 16px;
-        cursor: url("/images/cursor.png"), auto;
-    }
-
-    .video-background {
-        background: #000;
-        position: fixed;
-        top: 0; right: 0; bottom: 0; left: 0;
-        z-index: -99;
-    }
-    .video-foreground,
-    .video-background video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        object-fit: cover;
-    }
-    #vidtop-content {
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-    }
-    .vid-info {
-        color: #fff;
-        font-family: "IM Fell DW Pica", Garamond, serif;
-        font-size: 1.5vw;
-        text-align: center;
-        overflow: hidden;
-        margin-bottom: 3em;
-    }
-    .vid-info div {
-        padding: 6rem;
-    }
-    .vid-info h1 {
-        font-family: "IM Fell DW Pica", serif;
-        font-size: 2.25vw;
-        font-weight: 700;
-        padding: .5em;
-        color: white;
-        text-shadow: 0 0 5px rgb(240, 184, 41);
-    }
-
-    .button {
-        text-decoration: none;
-        background: rgb(95, 43, 115);
-        padding: 1rem 1.5rem;
-        border-radius: 25px;
-        color: white;
-        transition:background-color .5s;
-        transition-timing-function: ease-in-out;
-    }
-
-    .button:hover {
-        background: white;
-        color: rgb(95, 43, 115);
-        box-shadow: 1px 1px 20px 4px rgb(196, 126, 242);
-    }
-
-    @media (min-aspect-ratio: 4/3) {
-      .video-foreground { height: 300%; top: -100%; }
-    }
-    @media (max-aspect-ratio: 4/3) {
-      .video-foreground { width: 300%; left: -100%; }
-    }
-    @media all and (max-width: 600px) {
-    .vid-info { width: 50%; padding: .5rem; }
-    .vid-info h1 { margin-bottom: .2rem; }
-    }
-    @media all and (max-width: 500px) {
-    .vid-info .acronym { display: none; }
-    }
   </style>
 </head>
 <body>
 
-<div class="video-background">
-    <div class="video-foreground">
-        <video autoplay loop muted>   
-            <source src="/images/StarsBGVideo.mp4" type="video/mp4">
-        </video>
-    </div>
-  </div>
-<div id="vidtop-content">
-<div class="vid-info">
-      <div>
-        <h1>Are you ready to get your fortune told?</h1>
-        <a href="/pick-a-card.html" class="button">I'm ready</a>
-     </div>
-  </div>
-</div>
-
+<img src="https://masai718.github.io/Resized/0347-transparent-1000px.png" alt="">
 </body>
 </html>
